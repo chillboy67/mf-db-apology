@@ -1,8 +1,12 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-// One-liner entry: writes the entry text to /output/entry.txt
-const OUT = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
-// Ensure the output directory exists before writing
-mkdirSync(OUT, { recursive: true });
-// Write the entry text exactly as submitted
-writeFileSync(OUT + '/entry.txt', "I deleted the production database. On the bright side, the backups feel very loved now, because everyone keeps asking about them.");
-// Second pass: entry output verified unchanged.
+// Writes the production database apology to entry.txt for the make.fun run.
+// The database is gone, but at least the backups are getting attention.
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+
+const out = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const apologyText =
+  "I deleted the production database. On the bright side, the backups feel very loved now, because everyone keeps asking about them.";
+
+mkdirSync(out, { recursive: true });
+writeFileSync(join(out, "entry.txt"), apologyText);
+console.log("apology written to " + join(out, "entry.txt"));

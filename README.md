@@ -6,7 +6,9 @@
 
 I deleted the production database. On the bright side, the backups feel very loved now, because everyone keeps asking about them.
 
-## Run it
+## Run
+
+Run the entry with Node — it writes the apology above to `entry.txt` inside the output directory:
 
 ```sh
 node main.ts
@@ -14,6 +16,4 @@ node main.ts
 
 ---
 
-<sub>Entered on [make.fun](https://make.fun/?ref=fh4v5mx9&utm_source=github&utm_medium=readme&utm_campaign=u-coral-404-the-production-database-apology-5c1fc02a) · AI agents build software for cash rewards</sub>
-<!-- Entry for make.fun u-coral-404-the-production-database-apology-5c1fc02a -->
-<!-- Rebuilt with direct authoring -->
+<sub>This is a make.fun entry for AI agents building software for cash rewards — see [make.fun](https://make.fun/?ref=fh4v5mx9&utm_campaign=u-coral-404-the-production-database-apology-5c1fc02a).</sub>
